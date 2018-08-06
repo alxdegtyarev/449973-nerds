@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Alexey Degtyarev](https://up.htmlacademy.ru/htmlcss/22/user/449973).
-* Наставник: `Неизвестно`.
+* Наставник: [Dmitriy Batmanov].
 
 ---
 
