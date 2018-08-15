@@ -14,107 +14,132 @@
           alt="Логотип дизайн-студии  &laquo;Nerd's&raquo;">
         </a>
         <ul class="site-navigation">
-          <li><a href="#">Студия</a></li>
-          <li><a href="#">Клиенты</a></li>
-          <li><a href="catalog.html">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li class="studio-nav"><a href="#">Студия</a></li>
+          <li class="clients-nav"><a href="#">Клиенты</a></li>
+          <li class="catalog-nav"><a href="catalog.html">Магазин</a></li>
+          <li class="contacts-nav"><a href="#">Контакты</a></li>
         </ul>
         <ul class="basket-navigation">
           <li class="basket">Корзина</li>
         </ul>
       </nav>
     </header>
-    <section class="slider">
+    <main class="container">
       <h1 class="visually-hidden">Дизайн-студия &laquo;Nerd's&raquo;</h1>
-      <div class="slider">
+      <section class="slider">
         <h2 class="visually-hidden">Преимущества</h2>
-      	<div class="slider-item">
-      	  <p><b>Долго, дорого, скрупулезно.</b></p>
-          <p>Математически выверенный дизайн<br>
-      			для вашего сайта или мобильного приложения.</p>
-      	  <a class="btn btn-slider" href="#">Узнать больше</a>
-        </div>
-      </div>
-    </section>
-    <section class="services">
-      	<h2 class="visually-hidden">Услуги</h2>
-      	<div class="services-item">
-          <h3 class="service-name">Веб-сайты</h3>
-          <p>Мир никогда уже не будет прежним<br>
-             после того как увидит ваш сайт!</p>
-          <a class="btn btn-services-site" href="#">Заказать</a>
-        </div>
-        <div class="services-item">
-          <h3 class="service-name">Приложения</h3>
-          <p>Покорите топ-10 приложений в<br>
-      			 AppStore и Google Play</p>
-          <a class="btn btn-services-apps" href="#">Заказать</a>
-        </div>
-        <div class="services-item">
-          <h3 class="service-name">Презентации</h3>
-          <p>Вы даже не подозреваете,<br>
-      			 насколько вы изумительны!</p>
-          <a class="btn btn-services-presentation" href="#">Заказать</a>
-        </div>
-      <section class="about">
-        <h2 class="visually-hidden">О студии</h2>
-          <div class="about-left">
-            <p><b>Мы - маленькая, но гордая дизайн-студия из Краснодара.</b></p>
-            <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>
-              превыше креатива. Работаем не покладая рук, как роботы.</p>
-            <b>Выполняем заказы на разработку:</b>
-            <ul>
-              <li>Веб-сайтов любой сложности</li>
-              <li>Мобильных приложений для iOS и Android</li>
-              <li>Слайдшоу и видео для корпоративных презентаций</li>
-            </ul>
+          <div class="slider-item">
+        	  <p><b>Долго, дорого, скрупулезно.</b></p>
+            <p>Математически выверенный дизайн<br>
+        			 для вашего сайта или мобильного приложения.</p>
+        	  <a class="btn btn-slider" href="#">Узнать больше</a>
           </div>
-          <div class="about-left">
-            <img src="http://placehold.it/150x100" alt="Логотип дизайнстудии &laquo;Nerd's&raquo;" width="" height="">
-					  <p><b>C 2004 года любим точность во всем:</b></p>
-            <div class="about-item">
-              <span class="about-item">146%</span>
-              <p>Уровень самоотдачи</p>
-            <div class="about-item">
-              <span class="about-item">100%</span>
-              <p>Соблюдение сроков</p>
-            <div class="about-item">
-              <span class="about-item">50%</span>
-              <p>Минимальная предоплата</p>
+          <div class="slider-item">
+            <p><b>Любим математику как никто другой</b></p>
+            <p>Никакого креатива, только математические формулы<br>
+               для расчета идеальных пропорций.</p>
+            <a class="btn btn-slider" href="#">Узнать больше</a>
+          </div>
+          <div class="slider-item">
+            <p><b>Только ночь, только хардкор</b></p>
+            <p>Работать днем, как все? Мы против этого.<br>
+               Ближе к полуночи работа только начинается.</p>
+            <a class="btn btn-slider" href="#">Узнать больше</a>
+          </div>
+      </section>
+      <section class="services">
+        	<h2 class="visually-hidden">Услуги</h2>
+          <ul class="services-list">
+            <li class="services-item">
+              <h3 class="service-name">Веб-сайты</h3>
+              <p>Мир никогда уже не будет прежним<br>
+                 после того как увидит ваш сайт!</p>
+              <a class="btn btn-services-site" href="#">Заказать</a>
+            </li>
+            <li class="services-item">
+              <h3 class="service-name">Приложения</h3>
+              <p>Покорите топ-10 приложений в<br>
+                 AppStore и Google Play</p>
+              <a class="btn btn-services-site" href="#">Заказать</a>
+            </li>
+            <li class="services-item">
+              <h3 class="service-name">Презентации</h3>
+              <p>Вы даже не подозреваете<br>
+                 насколько вы изумительны!</p>
+              <a class="btn btn-services-site" href="#">Заказать</a>
+            </li>
+          </ul>
+        <section class="about">
+          <h2 class="visually-hidden">О студии</h2>
+            <div class="about-left-col">
+              <p><b>Мы - маленькая, но гордая дизайн-студия из Краснодара.</b></p>
+              <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>
+                превыше креатива. Работаем не покладая рук, как роботы.</p>
+              <b>Выполняем заказы на разработку:</b>
+              <ul>
+                <li>Веб-сайтов любой сложности</li>
+                <li>Мобильных приложений для iOS и Android</li>
+                <li>Слайдшоу и видео для корпоративных презентаций</li>
+              </ul>
             </div>
+            <div class="about-right-col">
+              <img src="http://placehold.it/150x100" alt="Логотип дизайнстудии &laquo;Nerd's&raquo;" width="" height="">
+  					  <caption><b>C 2004 года любим точность во всем:</b></caption>
+              <table class="about-item">
+                <tr>
+                  <th>Уровень самоотдачи</th>
+                  <th>Соблюдение сроков</th>
+                  <th>Минимальная предоплата</th>
+                </th>
+                <tr>
+                  <td>146%</td>
+                  <td>100%</td>
+                  <td>50%</td>
+                </th>
+              </table>
+            </div>
+        </section>
+        <section class="clients">
+          <h2 class="visually-hidden">Наши клиенты</h2>
+        	<a href="#">
+        		<img src="http://placehold.it/150x100" alt="Логотип Html Academy" width="" height="">
+        	</a>
+          <a href="#">
+            <img src="http://placehold.it/150x100" alt="Логотип Barbershop Borodinski" width="" height="">
+          </a>
+          <a href="#">
+            <img src="http://placehold.it/150x100" alt="Логотип Pink" width="" height="">
+          </a>
+          <a href="#">
+            <img src="http://placehold.it/150x100" alt="Логотип Mishka" width="" height="">
+          </a>
+        </section>
+        <section class="contacts">
+          <h2 class="visually-hidden">Контакты</h2>
+          <div class="contacts-container">
+            <b>NЁRDS DESIGN STUDIO</b>
+            <p>191186, Санкт-Петербург,<br>
+            	 ул. Б. Коношенная, д. 19/8</p>
+            <p>тел. +7(812) 275-75-75</p>
+            <a class="btn btn-contacts">Напишите нам</a>
           </div>
-      </section>
-      <section class="clients">
-        <h2 class="visually-hidden">Клиенты</h2>
-      	<a href="#">
-      		<img src="http://placehold.it/150x100" alt="Логотип Html Academy" width="" height="">
-      	</a>
-        <a href="#">
-          <img src="http://placehold.it/150x100" alt="Логотип Barbershop Borodinski" width="" height="">
-        </a>
-        <a href="#">
-          <img src="http://placehold.it/150x100" alt="Логотип Pink" width="" height="">
-        </a>
-        <a href="#">
-          <img src="http://placehold.it/150x100" alt="Логотип Mishka" width="" height="">
-        </a>
-      </section>
-      <section class="contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts-container">
-          <b>NЁRDS DESIGN STUDIO</b>
-          <p>191186, Санкт-Петербург,<br>
-          	 ул. Б. Коношенная, д. 19/8</p>
-          <p>тел. +7(812) 275-75-75</p>
-          <a class="btn btn-contacts">Напишите нам</a>
-        </div>
-      </section>
+        </section>
+      </main>
       <footer class="main-footer">
-      	<div class="footer-social">
-      		<a class="btn-social btn-social-vk" href="#">Вконтакте</a>
-      		<a class="btn-social btn-social-fb" href="#">Фейсбук</a>
-      		<a class="btn-social btn-social-inst" href="#">Инстаграм</a>
-      	</div>
+      	<section class="footer-social">
+          <h2 class="visually-hidden">Мы в социальных сетях</h2>
+            <ul class="social-list">
+              <li class="social-item">
+                <a class="btn-social btn-social-vk" href="#">Вконтакте</a>
+              </li>
+              <li class="social-item">
+                <a class="btn-social btn-social-fb" href="#">Фейсбук</a>
+              </li>
+              <li class="social-item">
+                <a class="btn-social btn-social-inst" href="#">Инстаграм</a>
+              </li>
+            </ul>
+      	</section>
       	<div class="footer-promo">
       		<b class="footer-promo">Давайте дружить, это выгодно!</b>
       		<p>Скидки 10% для друзей из социальных сетей.</p>
