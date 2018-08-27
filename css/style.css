@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #283136;
+  background-color: #ffffff;
+}
+a {
+  text-decoration: none;
+}
+.visually-hidden {
+  visibility: hidden;
+}
+.main-navigation {
+  font-size: 17.5px;
+  line-height: 31.5px;
+  color: #000000;
+  background-color: #eeeeee;
+  text-transform: uppercase;
+}
+.site-navigation,
+.services-list,
+.social-list {
+  list-style: none;
+}
+.main-navigation a {
+  color: #000000;
+  background-color: #eeeeee;
+}
+.main-navigation a:hover,
+.main-navigation a:focus {
+  color: #fb565a;
+  background-color: #eeeeee;
+}
+.main-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #eeeeee;
+}
+.slider-item a,
+.services-list a,
+.contacts-container a,
+.social-list a,
+.modal-button-submit {
+  color: #ffffff;
+  background-color: #fb565a;
+  text-transform: uppercase;
+}
+.slider-item a:hover,
+.services-list a:hover,
+.contacts-container a:hover,
+.social-list a:hover,
+.slider-item a:focus,
+.services-list a:focus,
+.contacts-container a:focus,
+.social-list a:focus,
+.modal-button-submit:hover,
+.modal-button-submit:focus {
+  color: #ffffff;
+  background-color: #e74246;
+}
+.slider-item a:active,
+.services-list a:active,
+.contacts-container a:active,
+.social-list a:active,
+.modal-button-submit:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: ##d7373b;
+}
+.service-name {
+  text-transform: uppercase;
+}
+a.btn-services-app {
+  color: #ffffff;
+  background-color: #00ca74;
+}
+a:hover.btn-services-app,
+a:focus.btn-services-app {
+  color: #ffffff;
+  background-color: #00bc6c;
+}
+a:active.btn-services-app {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #00bc6c;
+}
+a.btn-services-presentations {
+  color: #ffffff;
+  background-color: #efc84a;
+}
+a:hover.btn-services-presentations,
+a:focus.btn-services-presentations {
+  color: #ffffff;
+  background-color: #eab534;
+}
+a:active.btn-services-presentations {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #e5a722;
+}
+.clients img {
+  opacity: 0.2;
+}
+.clients img:hover {
+  opacity: 1;
+}
+.clients img:active {
+  opacity: 0.1;
+}

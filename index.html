@@ -2,15 +2,16 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-header-logo">
-          <img src="img/nerds-logo.svg" width="" height=""
+          <img src="img/nerds-logo.svg" width="160px" height="65px"
           alt="Логотип дизайн-студии  &laquo;Nerd's&raquo;">
         </a>
         <ul class="site-navigation">
@@ -20,7 +21,6 @@
           <li class="site-navigation-item"><a href="#">Контакты</a></li>
         </ul>
         <div class="basket">
-          <img src="img/cart-icon.svg">
           <a href="#">Корзина</a>
         </div>
       </nav>
@@ -30,7 +30,7 @@
       <section class="slider">
         <h2 class="visually-hidden">Преимущества</h2>
           <div class="slider-item">
-            <img src="img/slide1.png" width="" height=""
+            <img src="img/slide1.png" width="698px" height="413px"
             alt="">
         	  <p><b>Долго, дорого, скрупулезно.</b></p>
             <p>Математически выверенный дизайн<br>
@@ -38,7 +38,7 @@
         	  <a class="btn btn-slider" href="#">Узнать больше</a>
           </div>
           <div class="slider-item">
-            <img src="img/slide2.png" width="" height=""
+            <img src="img/slide2.png" width="663px" height="430px"
             alt="">
             <p><b>Любим математику как никто другой</b></p>
             <p>Никакого креатива, только математические формулы<br>
@@ -46,7 +46,7 @@
             <a class="btn btn-slider" href="#">Узнать больше</a>
           </div>
           <div class="slider-item">
-            <img src="img/slide3.png" width="" height=""
+            <img src="img/slide3.png" width="759px" height="411px"
             alt="">
             <p><b>Только ночь, только хардкор</b></p>
             <p>Работать днем, как все? Мы против этого.<br>
@@ -71,7 +71,7 @@
               <h3 class="service-name">Приложения</h3>
               <p>Покорите топ-10 приложений в<br>
                  AppStore и Google Play</p>
-              <a class="btn btn-services-site" href="#">Заказать</a>
+              <a class="btn btn-services-app" href="#">Заказать</a>
             </li>
             <li class="services-item">
               <img src="img/illustration-3.png" width="" height=""
@@ -79,7 +79,7 @@
               <h3 class="service-name">Презентации</h3>
               <p>Вы даже не подозреваете<br>
                  насколько вы изумительны!</p>
-              <a class="btn btn-services-site" href="#">Заказать</a>
+              <a class="btn btn-services-presentations" href="#">Заказать</a>
             </li>
           </ul>
         <section class="about">
@@ -115,16 +115,16 @@
         <section class="clients">
           <h2 class="visually-hidden">Наши клиенты</h2>
         	<a href="#">
-        		<img src="img/logo-1.png" alt="Логотип Html Academy" width="" height="">
+        		<img src="img/logo-1.png" alt="Логотип Html Academy" width="199px" height="68px">
         	</a>
           <a href="#">
-            <img src="img/logo-2.png" alt="Логотип Barbershop Borodinski" width="" height="">
+            <img src="img/logo-2.png" alt="Логотип Barbershop Borodinski" width="209px" height="90px">
           </a>
           <a href="#">
-            <img src="img/logo-3.png" alt="Логотип Pink" width="" height="">
+            <img src="img/logo-3.png" alt="Логотип Pink" width="185px" height="52px">
           </a>
           <a href="#">
-            <img src="img/logo-4.png" alt="Логотип Mishka" width="" height="">
+            <img src="img/logo-4.png" alt="Логотип Mishka" width="173px" height="84px">
           </a>
         </section>
         <section class="contacts">
@@ -136,7 +136,7 @@
             <p>191186, Санкт-Петербург,<br>
             	 ул. Б. Коношенная, д. 19/8</p>
             <p>тел. +7(812) 275-75-75</p>
-            <a class="btn btn-contacts">Напишите нам</a>
+            <a class="btn btn-contacts" href="#">Напишите нам</a>
           </div>
         </section>
       </main>
@@ -145,15 +145,12 @@
           <h2 class="visually-hidden">Мы в социальных сетях</h2>
           <ul class="social-list">
             <li class="social-item">
-              <img src="img/vk-icon.svg">
               <a class="btn-social btn-social-vk" href="#">Вконтакте</a>
             </li>
             <li class="social-item">
-              <img src="img/fb-icon.svg">
               <a class="btn-social btn-social-fb" href="#">Фейсбук</a>
             </li>
             <li class="social-item">
-              <img src="img/insta-icon.svg">
               <a class="btn-social btn-social-inst" href="#">Инстаграм</a>
             </li>
           </ul>
@@ -163,5 +160,26 @@
       		<p>Скидки 10% для друзей из социальных сетей.</p>
       	</div>
       </footer>
+      <section class="modal write-us">
+        <h2>Напишите нам</h2>
+        <form class="write-us" action="https://echo.htmlacademy.ru" method="post" >
+          <p class="write-us-item">
+            <label for="write-us-name">Ваше имя:</label>
+            <input type="text" name="write-us-name" id="write-us-name" placeholder="Имя Фамилия">
+          </p>
+          <p class="write-us-item">
+            <label for="write-us-email">Ваш e-mail:</label>
+            <input type="email" name="write-us-email" id="write-us-email" placeholder="email@example.com">
+          </p>
+          <p class="write-us-item">
+            <label for="write-us-text">Текст письма:</label>
+          </p>
+          <p class="write-us-item">
+            <textarea name="write-us-text" id="write-us-text" placeholder="В свободной форме"></textarea>
+          </p>
+          <button class="btn modal-button-submit" type="submit">Отправить</button>
+        </form>
+          <button class="btn modal-button-close" type="button">Закрыть</button>
+      </section>
   </body>
 </html>
