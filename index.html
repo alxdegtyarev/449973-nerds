@@ -14,21 +14,26 @@
           <img src="img/nerds-logo.svg" width="160px" height="65px"
           alt="Логотип дизайн-студии  &laquo;Nerd's&raquo;">
         </a>
-        <ul class="site-navigation">
-          <li class="site-navigation-item"><a href="#">Студия</a></li>
-          <li class="site-navigation-item"><a href="#">Клиенты</a></li>
-          <li class="site-navigation-item"><a href="catalog.html">Магазин</a></li>
-          <li class="site-navigation-item"><a href="#">Контакты</a></li>
-        </ul>
-        <div class="basket">
-          <a href="#">Корзина</a>
+        <div class="main-navigation-wrapper">
+          <ul class="site-navigation">
+            <li class="site-navigation-item"><a href="#">Студия</a></li>
+            <li class="site-navigation-item"><a href="#">Клиенты</a></li>
+            <li class="site-navigation-item"><a href="catalog.html">Магазин</a></li>
+            <li class="site-navigation-item"><a href="#">Контакты</a></li>
+          </ul>
+          <div class="basket">
+            <img src="img/cart-icon.svg" alt="Корзина"><a href="#">Корзина</a></img>
+          </div>
         </div>
       </nav>
     </header>
     <main class="container">
       <h1 class="visually-hidden">Дизайн-студия &laquo;Nerd's&raquo;</h1>
-      <section class="slider">
+      <section id="slide-group" class="slider">
         <h2 class="visually-hidden">Преимущества</h2>
+          <input name="slider" id="slide1" class="slider__radio" type="radio">
+          <input name="slider" id="slide2" class="slider__radio" type="radio">
+          <input name="slider" id="slide3" class="slider__radio" type="radio">
           <div class="slider-item">
             <img src="img/slide1.png" width="698px" height="413px"
             alt="">
@@ -58,7 +63,7 @@
         	<h2 class="visually-hidden">Услуги</h2>
           <ul class="services-list">
             <li class="services-item">
-              <img src="img/illustration-1.png" width="" height=""
+              <img src="img/img-services-site.png" width="300px" height="146px"
               alt="">
               <h3 class="service-name">Веб-сайты</h3>
               <p>Мир никогда уже не будет прежним<br>
@@ -66,7 +71,7 @@
               <a class="btn btn-services-site" href="#">Заказать</a>
             </li>
             <li class="services-item">
-              <img src="img/illustration-2.png" width="" height=""
+              <img src="img/img-services-app.png" width="300px" height="146px"
               alt="">
               <h3 class="service-name">Приложения</h3>
               <p>Покорите топ-10 приложений в<br>
@@ -74,7 +79,7 @@
               <a class="btn btn-services-app" href="#">Заказать</a>
             </li>
             <li class="services-item">
-              <img src="img/illustration-3.png" width="" height=""
+              <img src="img/img-services-presentations.png" width="300px" height="146px"
               alt="">
               <h3 class="service-name">Презентации</h3>
               <p>Вы даже не подозреваете<br>
@@ -115,20 +120,20 @@
         <section class="clients">
           <h2 class="visually-hidden">Наши клиенты</h2>
         	<a href="#">
-        		<img src="img/logo-1.png" alt="Логотип Html Academy" width="199px" height="68px">
+        		<img src="img/logo-htmlacademy.png" alt="Логотип Html Academy" width="199px" height="68px">
         	</a>
           <a href="#">
-            <img src="img/logo-2.png" alt="Логотип Barbershop Borodinski" width="209px" height="90px">
+            <img src="img/logo-borodinski.png" alt="Логотип Barbershop Borodinski" width="209px" height="90px">
           </a>
           <a href="#">
-            <img src="img/logo-3.png" alt="Логотип Pink" width="185px" height="52px">
+            <img src="img/logo-Pink.png" alt="Логотип Pink" width="185px" height="52px">
           </a>
           <a href="#">
-            <img src="img/logo-4.png" alt="Логотип Mishka" width="173px" height="84px">
+            <img src="img/logo-Mishka.png" alt="Логотип Mishka" width="173px" height="84px">
           </a>
         </section>
         <section class="contacts">
-          <img src="img/map.png" width="" height=""
+          <img class="img-map" src="" width="" height=""
           alt="">
           <h2 class="visually-hidden">Контакты</h2>
           <div class="contacts-container">
