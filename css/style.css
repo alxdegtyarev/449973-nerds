@@ -10,112 +10,313 @@ body {
 a {
   text-decoration: none;
 }
+
 .visually-hidden {
   display: none;
 }
-/*+Шапка сайта*/
-.main-header {
-  background-color: #eeeeee;
+
+.btn {
+  padding: 19px 39px;
 }
+
+.btn-color-red {
+  color: #ffffff;
+  background-color: #fb565a;
+}
+.btn-color-red:hover,
+.btn-color-red:focus {
+  color: #ffffff;
+  background-color: #e74246;
+}
+.btn-color-red:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #d7373b;
+}
+
+.btn-color-green {
+  color: #ffffff;
+  background-color: #00ca74;
+}
+.btn-color-green:hover,
+.btn-color-green:focus {
+  color: #ffffff;
+  background-color: #00bc6c;
+}
+.btn-color-green:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #00aa62;
+}
+.btn-color-yellow {
+  color: #ffffff;
+  background-color: #efc84a;
+}
+.btn-color-yellow:hover,
+.btn-color-yellow:focus {
+  color: #ffffff;
+  background-color: #eab534;
+}
+.btn-color-yellow:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #e5a722;
+}
+
+/* + Шапка сайта*/
+.main-header {
+  display: flex;
+  align-items: center;
+  background-color: #eeeeee;
+  min-height: 132px;
+}
+
+.main-header-logo {
+  margin-right: 200px;
+}
+
+.main-navigation-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .main-navigation {
   display: flex;
   align-items: center;
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
   text-transform: uppercase;
 }
-.main-navigation-wrapper {
+
+.site-navigation-wrapper {
   display: flex;
-  width: 900px;
+  flex-grow: 1;
+  max-width: 900px;
   align-items: center;
   justify-content: space-between;
 }
+
 .site-navigation {
   display: flex;
-  width: 640px;
+  list-style: none;
+  max-width: 640px;
+  padding-left: 0;
+  margin: 0;
 }
 
-.site-navigation li {
-  list-style: none;
-  flex-grow: 1;
+.site-navigation-item {
+  padding-right: 47px;
 }
+
 .site-navigation a,
 .basket a {
   color: #000000;
   font-weight: bold;
 }
+
 .main-navigation a:hover,
 .main-navigation a:focus {
   color: #fb565a;
   background-color: #eeeeee;
 }
+
 .main-navigation a:active {
   color: rgba(0, 0, 0, 0.3);
   background-color: #eeeeee;
 }
-.basket img {
-  padding-right: 5px;
+
+.basket {
+  background-image: url("../img/cart-icon.svg");
+  background-repeat: no-repeat;
 }
 /*-Шапка сайта*/
-/*+Слайдер*/
-section.slider {
-  display: flex;
+/* + Слайдер*/
+.slider {
+  position: relative;
+  background-color: #eeeeee;
 }
-/*-Слайдер*/
-/*+Раздел услуги*/
+.slider-control {
+  position: absolute;
+  left: 50%;
+  bottom: 104px;
+  z-index: 100;
+  width: 160px;
+  height: 18px;
+  text-align: center;
+  font-size: 0;
+  transform: translateX(-50%);
+}
+.slider-control label {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slider-control label::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 80px;
+}
+
+.slide-item {
+  display: none;
+  padding: 78px 0 80px 0;
+}
+
+.slide-item:nth-child(1) {
+  background-image: url("../img/slide1.png");
+  background-repeat: no-repeat;
+  background-position: 93% 18px;
+}
+
+.slide-item:nth-child(2) {
+  background-image: url("../img/slide2.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.slide-item:nth-child(3) {
+  background-image: url("../img/slide3.png");
+  background-repeat: no-repeat;
+  background-position: 100% 20px;
+}
+
+#slide-one-btn:checked ~ .slider-list .slide-item:nth-child(1) {
+  display: block;
+}
+#slide-two-btn:checked ~ .slider-list .slide-item:nth-child(2) {
+  display: block;
+}
+#slide-three-btn:checked ~ .slider-list .slide-item:nth-child(3) {
+  display: block;
+}
+#slide-one-btn:checked ~ .slide-control .slide-control-item-one::before,
+#slide-two-btn:checked ~ .slide-control .slide-control-item-two::before,
+#slide-three-btn:checked ~ .slide-control .slide-control-item-three::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 4px;
+  height: 4px;
+  margin: -4px;
+  background-color: inherit;
+  border: 2px solid #c1c1c1;
+  border-radius: 50%;
+}
+.slide-item h3 {
+  max-width: 600px;
+  margin: 0;
+  margin-bottom: 27px;
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+.slide-item p {
+  max-width: 430px;
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+
+/* - Слайдер*/
+/* + Раздел услуги*/
+.services {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid black;
+}
+
 .services h3 {
   text-transform: uppercase;
 }
-.services .services-list {
+.services-list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+
 }
 .services .services-item {
   padding-right: 100px;
 }
-a.btn-services-site {
-  color: #ffffff;
-  background-color: #fb565a;
-}
-a:hover.btn-services-site,
-a:focus.btn-services-site {
-  color: #ffffff;
-  background-color: #e74246;
-}
-a:active.btn-services-site {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #d7373b;
-}
-
-a.btn-services-app {
-  color: #ffffff;
-  background-color: #00ca74;
-}
-a:hover.btn-services-app,
-a:focus.btn-services-app {
-  color: #ffffff;
-  background-color: #00bc6c;
-}
-a:active.btn-services-app {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #00bc6c;
-}
-a.btn-services-presentations {
-  color: #ffffff;
-  background-color: #efc84a;
-}
-a:hover.btn-services-presentations,
-a:focus.btn-services-presentations {
-  color: #ffffff;
-  background-color: #eab534;
-}
-a:active.btn-services-presentations {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #e5a722;
+.service-list p {
+  padding-bottom: 105px;
 }
 
 
-/*-Раздел услуги*/
+/* - Раздел услуги*/
+/* + О нас */
+.about-wrapper {
+  display: flex;
+}
+.about-table tbody {
+  display: flex;
+  flex-direction: column;
+}
+.row-one {
+  order: 1;
+}
+.row-two {
+  order: 0;
+}
+/* - О нас */
+
+/* + Раздел клиенты*/
+.clients img {
+  opacity: 0.2;
+}
+.clients img:hover,
+.clients img:focus {
+  opacity: 1;
+}
+.clients img:active {
+  opacity: 0.1;
+}
+.clients-wrapper {
+  position: relative;
+
+}
+/* + Раздел клиенты*/
+/* + Раздел социальные сети */
+.social-list .social-item {
+  list-style: none;
+  background-color: #e1e1e1;
+}
+.btn-social-vk {
+  background-image: url("../img/vk-icon.svg");
+  background-repeat: no-repeat;
+}
+.btn-social-fb {
+  background-image: url("../img/fb-icon.svg");
+  background-repeat: no-repeat;
+}
+.btn-social-inst {
+  background-image: url("../img/insta-icon.svg");
+  background-repeat: no-repeat;
+}
+
+/* - Раздел социальные сети */
