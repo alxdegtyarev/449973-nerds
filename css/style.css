@@ -419,6 +419,16 @@ a {
   font-size: 0;
 }
 
+.btn-social:hover,
+.btn-social:focus {
+  background-color: #e74246;
+}
+
+.btn-social:active {
+  background-color: #d7373b;
+}
+
+
 .btn-social-vk {
   background-image: url("../img/vk-icon.svg");
   background-repeat: no-repeat;
@@ -529,9 +539,19 @@ a {
   display: flex;
 }
 
+.filter {
+  margin-left: 139px;
+  margin-right: 139px;
+}
+
+.filter span {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
 /* -- Стили для сетки каталога -- */
 
-/* ++ Каталог. Форма. Фильтра стоимости ++ */
+/* ++ Каталог. Форма. Фильтр стоимости ++ */
 
 .filter-item {
   margin: 0;
@@ -624,7 +644,28 @@ a {
   text-align: right;
 }
 
-/* -- Каталог. Форма. Фильтра стоимости -- */
+/* -- Каталог. Форма. Фильтр стоимости -- *
+
+/* ++ Каталог. Форма. Фильтр сетки ++ */
+
+.filter-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* -- Каталог. Форма. Фильтр сетки -- */
+
+/* ++ Каталог. Форма. Фильтр особенности ++ */
+
+
+/* -- Каталог. Форма. Фильтр особенности -- */
+
+.filter-features {
+  display: flex;
+  flex-direction: column;
+}
+
 
 /* ++ Каталог. Карточки проектов ++  */
 
