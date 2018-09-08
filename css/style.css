@@ -544,10 +544,60 @@ a {
   margin-right: 139px;
 }
 
-.filter span {
-  font-size: 16px;
+.filter ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  line-height: 18px;
+}
+
+.filter fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+
+  border: none;
+}
+
+.filter legend {
+  margin-bottom: 27px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 31px;
   text-transform: uppercase;
 }
+
+.filter fieldset:first-child {
+  margin-bottom: 27px;
+}
+
+.filter-option {
+  margin-bottom: 19px;
+  padding-left: 45px;
+}
+
+.filter-option label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-check + label::before {
+  content: "";
+  position: absolute;
+
+  width: 16px;
+  height: 16px;
+
+  left: -42px;
+  top: 0;
+
+  border: 2px solid #000000;
+}
+
 
 /* -- Стили для сетки каталога -- */
 
