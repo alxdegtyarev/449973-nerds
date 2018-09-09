@@ -9,6 +9,7 @@ body {
 }
 a {
   text-decoration: none;
+  text-align: center;
 }
 
 .visually-hidden {
@@ -33,13 +34,13 @@ a {
 }
 
 .btn {
-  padding: 19px 39px;
-  font-size: 16px;
-  line-height: 18px;
+  display: inline-block;
+  min-width: 160px;
+  padding-top: 19px;
+  padding-bottom: 18px;
+  font-size: 17px;
+  line-height: 17px;
   text-transform: uppercase;
-}
-.slide-item-btn {
-
 }
 
 .btn-color-red {
@@ -93,7 +94,6 @@ a {
 
 .main-header {
   padding-top: 49px;
-  padding-bottom: 15px;
   background-color: #eeeeee;
 }
 
@@ -140,6 +140,7 @@ a {
 }
 
 .site-navigation-item {
+  padding-top: 15px;
   padding-right: 47px;
 }
 
@@ -159,6 +160,7 @@ a {
 }
 
 .basket {
+  padding-top: 15px;
   padding-left: 26px;
   position: relative;
 }
@@ -168,8 +170,8 @@ a {
   position: absolute;
   width: 15px;
   height: 15px;
-  left: 0;
-  top: 50%;
+  right: 101px;
+  top: 27px;
   margin-top: -10px;
 }
 /*-Шапка сайта*/
@@ -178,13 +180,16 @@ a {
   position: relative;
   background-color: #eeeeee;
 }
+.slide-item-btn {
+  min-width: 240px;
+}
+
 .slider-control {
   position: absolute;
   left: 50%;
-  bottom: 104px;
+  bottom: 90px;
   z-index: 100;
   width: 160px;
-  height: 18px;
   text-align: center;
   font-size: 0;
   transform: translateX(-50%);
@@ -218,7 +223,10 @@ a {
 
 .slide-item {
   display: none;
-  padding: 78px 0 80px 0;
+  padding-top: 80px;
+  padding-right: 0px;
+  padding-bottom: 80px;
+  padding-left: 0;
 }
 
 .slide-item:nth-child(1) {
@@ -266,7 +274,7 @@ a {
 .slide-item h3 {
   max-width: 600px;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
@@ -274,7 +282,7 @@ a {
 .slide-item p {
   max-width: 430px;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 35px;
 }
 
 
@@ -286,28 +294,49 @@ a {
   border-bottom: 1px solid black;
 }
 
-.services h3 {
-  text-transform: uppercase;
-}
+
 .services-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
+  margin: 0;
+  padding-left: 0;
 }
 
+.service-name {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 32px;
+}
 .services-item {
   flex-grow: 1;
   width: 300px;
-  margin: 10px;
+  padding-left: 40px;
+}
+.services-item p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 24px;
+  border-color: #283136;
+}
+
+
+.services-item:first-child {
+  padding-left: 0;
+}
+
+.services-item img {
+  margin-bottom: 15px;
 }
 
 /* -- Раздел услуги -- */
 
 /* ++ О нас ++ */
 .about {
-  display: flex;
-  max-width: 1200px;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid black;
 }
 
 .about-wrapper {
@@ -315,19 +344,41 @@ a {
   flex-grow: 1;
 }
 
+.orders {
+    padding-left: 0;
+}
+
+.orders li {
+  position: relative;
+  padding-left: 35px;
+  list-style: none;
+}
+
+.orders li::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  background-color: #fb565a;
+  margin-top: -1px;
+}
+
+
 .about-left-col {
-  margin-left: 41px;
   width: 670px;
 }
 .about-left-col span {
+  display: inline-block;
   font-size: 45px;
   line-height: 45px;
-
 }
 
 .about-left-col p {
   font-size: 16px;
   line-height: 24px;
+  margin-bottom: 30px;
 }
 .about-left-col b {
   text-transform: uppercase;
@@ -344,15 +395,30 @@ a {
   order: 0;
   font-weight: bold;
   font-size: 45px;
-  line-height: 10px;
-  margin: 20px;
+  line-height: 45px;
   text-align: center;
 }
 
+.about-table {
+  border-collapse: collapse;
+
+}
 
 /* -- О нас -- */
 
 /* ++ Раздел клиенты ++ */
+.clients {
+  padding-top: 80px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid black;
+}
+.clients-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .clients img {
   opacity: 0.2;
 }
@@ -363,60 +429,94 @@ a {
 .clients img:active {
   opacity: 0.1;
 }
-.clients-wrapper img {
-  padding-left: 50px;
 
-}
-.clients-wrapper {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
 
-}
 /* -- Раздел клиенты -- */
 
 /* ++ Контакты ++ */
+.contacts {
+  position: relative;
+}
+
 .contacts-container {
+  position: absolute;
+  top: 54px;
+  left: 140px;
   width: 319px;
   height: 308px;
-  margin-left: 140px;
+  background-color: #ffffff;
 
 }
+
+.contacts-wrapper {
+  margin: 50px 50px;
+}
+
 .contacts-container p {
   color: #666666;
-
+  font-size: 16px;
+  line-height: 18px;
 }
+
 
 .map {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: -1;
   margin: 0;
 }
 
 .contacts iframe {
-  position: relative;
-  z-index: 2;
   border: none;
 }
 
 /* -- Контакты -- */
 
 /* ++ Раздел социальные сети ++ */
+.main-footer {
+  padding-top: 115px;
+  padding-bottom: 60px;
+
+}
+.main-footer .footer-social {
+  display: flex;
+}
 .social-list {
   display: flex;
   list-style: none;
-
+  padding: 0;
+  margin-right: 135px;
 }
+
+.footer-promo {
+  padding-top: 20px;
+}
+
+.footer-promo b {
+  font-size: 35px;
+  line-height: 35px;
+  font-weight: bold;
+}
+.footer-promo p {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #444444;
+}
+
 .btn-social {
-  display: inline-block;
-  width: 69px;
-  height: 69px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 79px;
+  height: 79px;
   background-color: #e1e1e1;
   margin-right: 10px;
   vertical-align: middle;
   font-size: 0;
+  border-radius: 50%;
 }
 
 .btn-social:hover,
@@ -424,115 +524,57 @@ a {
   background-color: #e74246;
 }
 
-.btn-social:active {
+.btn-social:active::before {
   background-color: #d7373b;
+  opacity: 0.3;
 }
 
 
-.btn-social-vk {
+.btn-social-vk::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
   background-image: url("../img/vk-icon.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  border-radius: 50%;
 }
 
-.btn-social-fb {
+.btn-social-fb::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
   background-image: url("../img/fb-icon.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  border-radius: 50%;
 }
-.btn-social-insta {
+
+.btn-social-insta::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
   background-image: url("../img/insta-icon.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  border-radius: 50%;
 }
 
-.footer-social {
-  display: flex;
-}
-
-.footer-promo {
-  width: auto;
-}
 /* -- Раздел социальные сети -- */
 
-/* ++ Модальное окно ++ */
-.modal {
-  display: none;
-  position: fixed;
-  color: #000000;
-  background-color: #f8f3f0;
-  box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
 
+/* ++ Каталог. Заголовок первого уровня. ++ */
+.catalog-title {
+  margin: 0;
+  padding-top: 80px;
+  background-color: #eeeeee;
+  height: 130px;
+  font-size: 54px;
+  line-height: 54px;
+  text-align: center;
 }
+/* -- Каталог. Заголовок первого уровня. -- */
 
-.write-us {
-  top: 170px;
-  left: 120px;
-  width: 960px;
-  height: 590px;
-
-}
-
-.modal-close {
-  position: absolute;
-  top: 79px;
-  right: 90px;
-  width: 21px;
-  height: 21px;
-  font-size: 0;
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-
-}
-.modal-close::before,
-.modal-close::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 2px;
-  width: 19px;
-  height: 3px;
-  background-color: #fb565a;
-}
-
-.modal-close::before {
-  transform: rotate(45deg);
-}
-
-.modal-close::after {
-  transform: rotate(-45deg);
-}
-
-.modal h2 {
-  margin-top: 73px;
-  margin-left: 101px;
-
-  font-size: 45px;
-  line-height: 45px;
-}
-
-.write-us-item {
-  margin-top: 10px;
-  margin-left: 101px;
-}
-.form-write-us input[type="text"],
-.form-write-us input[type="email"] {
-  box-sizing: border-box;
-  width: 300px;
-  padding: 10px 15px;
-  padding-right: 40px;
-
-  font: inherit;
-  color: #000000;
-  text-transform: uppercase;
-
-  background-color: #f9f6f3;
-  border: 2px solid #000000;
-}
 /* ++ Стили для сетки каталога ++  */
 
 .catalog {
@@ -585,7 +627,35 @@ a {
   user-select: none;
 }
 
-.filter-check + label::before {
+.filter-radio + label::before {
+  content: "";
+
+  position: absolute;
+  left: -42px;
+  top: -1px;
+
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+.filter-radio:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 5px;
+  left: -36px;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: #000000;
+  border-radius: 50%;
+}
+
+.filter-checkbox + label::before {
   content: "";
   position: absolute;
 
@@ -595,9 +665,34 @@ a {
   left: -42px;
   top: 0;
 
-  border: 2px solid #000000;
+  /* border: 2px solid #000000; */
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
+.filter-checkbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left: -38px;
+
+
+  width: 27px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+
+
+input[type="checkbox"],
+input[type="radio"] {
+    display:none;
+}
 
 /* -- Стили для сетки каталога -- */
 
@@ -729,4 +824,125 @@ a {
   flex-grow: 1;
 }
 
-/* -- Катало. Карточки проектов --  */
+/* -- Каталог. Карточки проектов --  */
+
+/* ++ Каталог. Пагинация ++ */
+.pagination-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.pagination-item {
+  margin-right: 5px;
+}
+.pagination-item:last-child {
+  margin-right: 0;
+}
+
+.pagination-item a {
+  display: block;
+  padding: 10px 19px;
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+  background-color: #dfdfdf;
+}
+
+.pagination-item a:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #d5d5d5;
+
+}
+
+.pagination-item-current a {
+  padding: 0;
+  width: 41px;
+  height: 39px;
+  border: solid 3px #dbdbdb;
+  background-color: #ffffff;
+}
+
+
+/* -- Каталог. Пагинация -- */
+
+/* ++ Модальное окно ++ */
+.modal {
+  position: fixed;
+  display: none;
+  color: #000000;
+  background-color: #f8f3f0;
+  box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
+
+}
+
+.modal-write-us {
+  top: 170px;
+  left: 120px;
+  width: 960px;
+  height: 590px;
+}
+.modal-show {
+  display: block;
+}
+
+.modal-close {
+  position: absolute;
+  top: 79px;
+  right: 90px;
+  width: 21px;
+  height: 21px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+}
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: #fb565a;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal h2 {
+  margin-top: 73px;
+  margin-left: 101px;
+
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.write-us-item {
+  margin-top: 10px;
+  margin-left: 101px;
+}
+.form-write-us input[type="text"],
+.form-write-us input[type="email"] {
+  box-sizing: border-box;
+  width: 300px;
+  padding: 10px 15px;
+  padding-right: 40px;
+  font: inherit;
+  color: #000000;
+  text-transform: capitalize;
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+}
+/* -- Модальное окно -- */
