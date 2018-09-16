@@ -41,6 +41,7 @@ a {
   font-size: 17px;
   line-height: 17px;
   text-transform: uppercase;
+  border-radius: 4px;
 }
 
 .btn-color-red {
@@ -137,11 +138,15 @@ a {
   max-width: 640px;
   padding-left: 0;
   margin: 0;
+
+  margin-top: 17px;
+  width: 442px;
+  justify-content: space-between;
+}
 }
 
 .site-navigation-item {
-  padding-top: 15px;
-  padding-right: 47px;
+
 }
 
 .site-navigation a,
@@ -319,13 +324,14 @@ a {
   text-transform: uppercase;
   font-size: 25px;
   line-height: 32px;
+  margin-bottom: 16px;
 }
 .services-item {
-  flex-grow: 1;
+  margin-right: 100px;
   width: 300px;
-  padding-left: 40px;
 }
 .services-item p {
+  margin: 0;
   margin-bottom: 30px;
   font-size: 16px;
   line-height: 24px;
@@ -333,8 +339,8 @@ a {
 }
 
 
-.services-item:first-child {
-  padding-left: 0;
+.services-item:last-child {
+  margin-right: 0;
 }
 
 .services-item img {
@@ -423,12 +429,6 @@ a {
   padding-bottom: 60px;
   border-bottom: 1px solid black;
 }
-.clients-wrapper {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
 
 .clients img {
   opacity: 0.2;
@@ -441,6 +441,14 @@ a {
   opacity: 0.1;
 }
 
+.our-clients {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
 /* -- Раздел клиенты -- */
 
@@ -486,6 +494,8 @@ a {
 
 .contacts iframe {
   border: none;
+  width: 100%;
+  height: 416px;
 }
 
 /* -- Контакты -- */
@@ -506,18 +516,24 @@ a {
   margin-right: 135px;
 }
 
+.social-item {
+  margin-right: 10px;
+
+}
+
 .footer-promo {
   padding-top: 20px;
 }
 
 .footer-promo b {
+  display: inline-block;
   font-size: 35px;
   line-height: 35px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 .footer-promo p {
   margin: 0;
-  margin-top: 10px;
   font-size: 16px;
   line-height: 22px;
   color: #444444;
@@ -530,7 +546,6 @@ a {
   width: 79px;
   height: 79px;
   background-color: #e1e1e1;
-  margin-right: 10px;
   vertical-align: middle;
   font-size: 0;
   border-radius: 50%;
@@ -626,19 +641,58 @@ a {
 }
 
 .filter-option {
-  padding-top: 19px;
-  padding-left: 37px;
+
 }
 
 .filter-option label {
   position: relative;
-
-  display: block;
-
+  padding-left: 37px;
   cursor: pointer;
   user-select: none;
+  padding-bottom: 22px;
+
 }
 
+.radio {
+  display: inline-block;
+  padding-bottom: 10px;
+
+}
+
+.checkbox {
+  display: inline-block;
+  padding-bottom: 10px;
+
+}
+
+.radio::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: -2px;
+  width: 16px;
+  height: 16px;
+  border: 3px solid #a6a6a6;
+  border-radius: 50%;
+}
+
+.checkbox::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 16px;
+  height: 16px;
+  border: 3px solid #a6a6a6;
+}
+
+
+
+
+
+
+
+/*
 .filter-radio + label::before {
   content: "";
   position: absolute;
@@ -686,14 +740,10 @@ a {
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-}
+} */
 
 
 
-input[type="checkbox"],
-input[type="radio"] {
-    display:none;
-}
 
 /* -- Стили для сетки каталога -- */
 
@@ -797,18 +847,20 @@ input[type="radio"] {
   display: flex;
   flex-direction: column;
   margin-top: 56px;
+  padding-bottom: 15px;
 }
 
 
 .filter  .filter-features {
   display: flex;
   flex-direction: column;
-  margin-top: 48px;
+  margin-top: 10px;
+  padding-bottom: 15px;
 }
 
 .btn-filter {
   width: 260px;
-  margin-top: 58px;
+  margin-top: 14px;
   padding-top: 17px;
   padding-bottom: 11px;
   border: none;
@@ -834,35 +886,39 @@ input[type="radio"] {
 
 .sorting-list {
   display: flex;
-  align-items: center;
-  width: 300px;
+  width: 268px;
   justify-content: space-between;
-}
-
-.sorting ul {
   padding: 0;
   margin: 0;
   list-style: none;
   line-height: 18px;
+  margin-right: 50px;
 }
 
-.sorting li {
+.sorting-item {
   text-transform: uppercase;
   font-size: 14px;
-
 }
+
+.sorting-item a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-item-current a {
+  color: #000000;
+}
+
 
 .sorting-arrows {
-  width: 47px;
-  margin-left: 20px;
   position: relative;
+  list-style: none;
 }
-
 
 .sorting-arrows-down:before {
   content:'';
   position: absolute;
-  top: 3px;
+  bottom: 1px;
+  right: 29px;
   width: 0;
   height: 0;
   border-style: solid;
@@ -873,8 +929,8 @@ input[type="radio"] {
 .sorting-arrows-up:before {
   content:'';
   position: absolute;
-  top: 3px;
-  left: 20px;
+  bottom: 1px;
+  right: 1px;
   width: 0;
   height: 0;
   border-style: solid;
@@ -909,7 +965,7 @@ input[type="radio"] {
   padding: 0;
   margin: 0;
   list-style: none;
-  margin-top: 95px;
+  margin-top: 81px;
 }
 
 .catalog-item {
