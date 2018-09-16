@@ -159,6 +159,17 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.current a::after {
+  content: "";
+  position: absolute;
+  width: 74px;
+  height: 2px;
+  top: 108px;
+  left: 805px;
+  background-color: #fb565a;
+}
+
+
 .basket {
   padding-top: 15px;
   padding-left: 26px;
@@ -385,14 +396,14 @@ a {
 }
 
 .about-table tbody {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 .row-one {
-  order: 1;
+  /* order: 1; */
 }
 .row-two {
-  order: 0;
+  /* order: 0; */
   font-weight: bold;
   font-size: 45px;
   line-height: 45px;
@@ -436,6 +447,7 @@ a {
 /* ++ Контакты ++ */
 .contacts {
   position: relative;
+  margin-top: 54px;
 }
 
 .contacts-container {
@@ -458,6 +470,11 @@ a {
   line-height: 18px;
 }
 
+.btn-contacts {
+  width: 219px;
+}
+
+
 
 .map {
   position: absolute;
@@ -475,7 +492,7 @@ a {
 
 /* ++ Раздел социальные сети ++ */
 .main-footer {
-  padding-top: 115px;
+  padding-top: 46px;
   padding-bottom: 60px;
 
 }
@@ -568,22 +585,18 @@ a {
   margin: 0;
   padding-top: 80px;
   background-color: #eeeeee;
-  height: 130px;
+  height: 161px;
   font-size: 54px;
   line-height: 54px;
   text-align: center;
 }
 /* -- Каталог. Заголовок первого уровня. -- */
 
-/* ++ Стили для сетки каталога ++  */
-
-.catalog {
-  display: flex;
-}
+/* ++ РАЗМЕТКА ФИЛЬТРА КАТАЛОГА ++ */
 
 .filter {
-  margin-left: 139px;
-  margin-right: 139px;
+
+
 }
 
 .filter ul {
@@ -593,16 +606,15 @@ a {
   line-height: 18px;
 }
 
+
 .filter fieldset {
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
-
   border: none;
+
 }
 
 .filter legend {
-  margin-bottom: 27px;
   font-size: 17px;
   font-weight: bold;
   line-height: 31px;
@@ -610,12 +622,12 @@ a {
 }
 
 .filter fieldset:first-child {
-  margin-bottom: 27px;
+
 }
 
 .filter-option {
-  margin-bottom: 19px;
-  padding-left: 45px;
+  padding-top: 19px;
+  padding-left: 37px;
 }
 
 .filter-option label {
@@ -629,43 +641,36 @@ a {
 
 .filter-radio + label::before {
   content: "";
-
   position: absolute;
   left: -42px;
   top: -1px;
-
-  width: 16px;
-  height: 16px;
-
-  border: 2px solid #000000;
-  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .filter-radio:checked + label::after {
   content: "";
 
   position: absolute;
-  top: 5px;
-  left: -36px;
-
-  width: 8px;
-  height: 8px;
-
-  background-color: #000000;
-  border-radius: 50%;
+  left: -42px;
+  top: -1px;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/radio-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .filter-checkbox + label::before {
   content: "";
   position: absolute;
-
-  width: 16px;
-  height: 16px;
-
+  width: 23px;
+  height: 23px;
   left: -42px;
-  top: 0;
-
-  /* border: 2px solid #000000; */
+  top: -3px;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -673,15 +678,11 @@ a {
 
 .filter-checkbox:checked + label::after {
   content: "";
-
   position: absolute;
-  top: 4px;
-  left: -38px;
-
-
   width: 27px;
   height: 23px;
-
+  left: -42px;
+  top: -3px;
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -706,7 +707,7 @@ input[type="radio"] {
 
 .range-filter {
   width: 260px;
-  margin-top: 49px;
+  margin-top: 50px;
 }
 
 .filter-item legend {
@@ -718,9 +719,7 @@ input[type="radio"] {
 
 .range-controls {
   position: relative;
-
   height: 41px;
-  margin-bottom: 15px;
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
@@ -741,7 +740,7 @@ input[type="radio"] {
 
 .range-controls .toggle {
   position: absolute;
-  top: 31px;
+  top: 30px;
   left: 0;
   width: 4px;
   height: 4px;
@@ -754,15 +753,16 @@ input[type="radio"] {
 }
 
 .range-controls .toggle-min {
-  left: 50px;
+  left: 17px;
 }
 
 .range-controls .toggle-max {
-  left: 110px;
+  left: 160px;
 }
 
 .price-controls {
   font-size: 0;
+  padding-top: 16px;
 }
 
 .price-controls label {
@@ -793,40 +793,189 @@ input[type="radio"] {
 
 /* ++ Каталог. Форма. Фильтр сетки ++ */
 
-.filter-grid {
+.filter .filter-grid {
   display: flex;
   flex-direction: column;
+  margin-top: 56px;
 }
 
 
+.filter  .filter-features {
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+}
+
+.btn-filter {
+  width: 260px;
+  margin-top: 58px;
+  padding-top: 17px;
+  padding-bottom: 11px;
+  border: none;
+}
 /* -- Каталог. Форма. Фильтр сетки -- */
 
-/* ++ Каталог. Форма. Фильтр особенности ++ */
 
+/* -- РАЗМЕТКА ФИЛЬТРА КАТАЛОГА -- */
 
-/* -- Каталог. Форма. Фильтр особенности -- */
+/* ++ КАТАЛОГ. СОРТИРОВКА ++ */
 
-.filter-features {
+.sorting {
   display: flex;
-  flex-direction: column;
+}
+
+.sorting-heading {
+  margin: 0;
+  margin-right: auto;
+  text-transform: uppercase;
+  font-size: 17px;
+  line-height: 17px;
+}
+
+.sorting-list {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  justify-content: space-between;
+}
+
+.sorting ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  line-height: 18px;
+}
+
+.sorting li {
+  text-transform: uppercase;
+  font-size: 14px;
+
+}
+
+.sorting-arrows {
+  width: 47px;
+  margin-left: 20px;
+  position: relative;
 }
 
 
-/* ++ Каталог. Карточки проектов ++  */
+.sorting-arrows-down:before {
+  content:'';
+  position: absolute;
+  top: 3px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 6px 0 6px;
+  border-color: #000 transparent transparent transparent;
+}
+
+.sorting-arrows-up:before {
+  content:'';
+  position: absolute;
+  top: 3px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 6px 11px 6px;
+  border-color: transparent transparent #000 transparent;
+}
+
+
+/* -- КАТАЛОГ. СОРТИРОВКА -- */
+
+
+/* ++ РАЗМЕТКА КАТАЛОГА ++ */
+
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 59px;
+}
+
+.filters {
+  width: 260px;
+}
+
+.catalog {
+  width: 760px;
+}
 
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-top: 95px;
 }
 
 .catalog-item {
-  flex-grow: 1;
+  position: relative;
+  width: 360px;
+  height: 576px;
+  margin-bottom: 73px;
+  /* margin-right: 36px; */
+
 }
 
-/* -- Каталог. Карточки проектов --  */
+.catalog-item::before {
+  content: "";
+  width: 360px;
+  height: 40px;
+  position: absolute;
+  background-image: url("../img/browser.svg");
+  margin-top: -39px;
+}
+
+.catalog-item:hover.catalog-item::before {
+  opacity: 0.3;
+}
+
+
+.catalog-item:nth-child(2n) {
+  /* margin-right: 0; */
+}
+
+.catalog-item-image {
+  margin: 0;
+}
+
+.card-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 360px;
+  height: 231px;
+  background-color: #eeeeee;
+  display: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.catalog-item:hover .card-wrapper {
+  display: block;
+}
+
+.catalog-category {
+  font-size: 17px;
+  line-height: 31px;
+  text-transform: uppercase;
+  display: block;
+
+}
+
+.catalog-item-title {
+  font-size: 16px;
+  line-height: 18px;
+  color: #666666;
+  font-weight: normal;
+  display: block;
+}
 
 /* ++ Каталог. Пагинация ++ */
+
 .pagination-list {
   display: flex;
   padding: 0;
@@ -835,15 +984,16 @@ input[type="radio"] {
 }
 
 .pagination-item {
-  margin-right: 5px;
+  margin-right: 14px;
 }
 .pagination-item:last-child {
   margin-right: 0;
+  width: 260px;
 }
 
 .pagination-item a {
   display: block;
-  padding: 10px 19px;
+  padding: 10px 20px;
   color: #000000;
   background-color: #eeeeee;
 }
@@ -860,19 +1010,64 @@ input[type="radio"] {
 }
 
 .pagination-item-current a {
-  padding: 0;
-  width: 41px;
-  height: 39px;
+  padding: 8px 20px;
+  width: 4px;
+  height: 23px;
   border: solid 3px #dbdbdb;
   background-color: #ffffff;
 }
 
-
 /* -- Каталог. Пагинация -- */
 
+
+/* -- РАЗМЕТКА КАТАЛОГА -- */
+
+
 /* ++ Модальное окно ++ */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal {
   position: fixed;
+  /* position: absolute; */
   display: none;
   color: #000000;
   background-color: #f8f3f0;
@@ -881,13 +1076,18 @@ input[type="radio"] {
 }
 
 .modal-write-us {
-  top: 170px;
-  left: 120px;
+  bottom: 20px;
+  left: 20%;
   width: 960px;
   height: 590px;
 }
 .modal-show {
   display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal-close {
@@ -928,6 +1128,7 @@ input[type="radio"] {
   font-size: 45px;
   line-height: 45px;
 }
+
 
 .write-us-item {
   margin-top: 10px;
