@@ -277,28 +277,13 @@
             <label for="write-us-text">Текст письма:</label>
           </p>
           <p class="write-us-item">
-            <textarea name="write-us-text" id="write-us-text" placeholder="В свободной форме"></textarea>
+            <textarea name="write-us-text" id="write-us-text" placeholder="В свободной форме" rows="8" cols="103"></textarea>
           </p>
           <button class="btn btn-color-red modal-submit" type="submit">Отправить</button>
         </form>
         <button class="modal-close" type="button">Закрыть</button>
       </section>
-      <script>
-        var link = document.querySelector(".btn-contacts");
-        var popup = document.querySelector(".modal-write-us");
-        var close = popup.querySelector(".modal-close");
-
-        link.addEventListener("click", function (evt) {
-          evt.preventDefault();
-          popup.classList.add("modal-show");
-        });
-
-        close.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.remove("modal-show");
-        });
-
-      </script>
+      <script src="js/modal.js"></script>
       <!-- - Модальное окно - -->
     </body>
     </html>
