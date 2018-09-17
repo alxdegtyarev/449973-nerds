@@ -1,5 +1,5 @@
 
-  var link = document.querySelector(".btn-contacts");
+  var link = document.querySelector(".button-contacts");
   var popup = document.querySelector(".modal-write-us");
   var close = popup.querySelector(".modal-close");
   var username = popup.querySelector("#write-us-name");
